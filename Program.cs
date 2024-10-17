@@ -6,6 +6,11 @@ namespace ConsoleApp1
     {
         public int x { get; set; }
         public MyDelegateAdd MyDelegateAdd { get; set; }
+
+        public int MyCaller(int x, int y)
+        {
+            return MyDelegateAdd(x, y);
+        }
     }
 
     public delegate int MyDelegateAdd(int x, int y);
